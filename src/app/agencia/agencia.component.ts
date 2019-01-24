@@ -16,7 +16,7 @@ export class AgenciaComponent implements OnInit {
 
   ngOnInit() {
       this.agenciaService.getAgencias()
-      .then((
+      .subscribe((
         agencias: Agencia[]
       ) => {
         this.agencias = agencias

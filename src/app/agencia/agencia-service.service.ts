@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Promise } from 'q';
 import { Agencia } from 'src/app/agencia/agencia';
 import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class AgenciaServiceService {
 
   constructor(private http: HttpClient) { }
 
-  public getAgencias(): Promise<Agencia[]>{
-    return this.http.get(`${this.url_api}/agencia/all`)
-    .toPromise()
+  public getAgencias(): Observable<Agencia[]> {
+    this.url_api =`${this.url_api}/agencia/all`;
+    return this.http.get<Agencia[]>(this.url_api);
   }
 }
