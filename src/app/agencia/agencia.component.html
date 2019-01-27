@@ -1,6 +1,29 @@
-<p>
-
-  <li *ngFor="let agencia of agencias">
-    {{ agencia.id }} - {{ agencia.cdAgencia }} -
-  </li>
-</p>
+<div class="container">
+  <div class="col-md-12">
+      <h3 class="lead">Agencias</h3>      
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Codigo Agencia</th>
+              <th>Endereço</th>
+              <th>Número</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let agencia of agencias">
+                <td>{{ agencia.id }}</td>
+                <td>{{ agencia.cdAgencia }}</td>
+                <td>{{ agencia.endereco.dsLogradouro }}</td>
+                <td>{{ agencia.endereco.nrLogradouro  }}</td>
+                <td>
+                  <button type="button" class="btn btn-primary">
+                      <i class="fa fa-edit"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
