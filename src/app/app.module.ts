@@ -6,14 +6,15 @@ import { AgenciaComponent } from './agencia/agencia.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-
+import { EditAgenciaComponent } from './agencia/edit-agencia/edit-agencia.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AgenciaComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    EditAgenciaComponent
   ],
   imports: [
     BrowserModule,

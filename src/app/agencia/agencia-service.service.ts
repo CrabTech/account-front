@@ -16,4 +16,6 @@ export class AgenciaServiceService {
     this.url_api =`${this.url_api}/agencia/all`;
     return this.http.get<Agencia[]>(this.url_api);
   }
+
+  
 }
